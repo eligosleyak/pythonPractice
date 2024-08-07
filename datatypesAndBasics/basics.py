@@ -26,7 +26,11 @@ Comment works on multiple lines
 # x = int(x)
 # print(x)
 #Addition subtraction multiplication and division of two
-x = 10
-y = 12
+# x = 10
+# y = 12
 
-print(f'Addition: {x+y}, Subtraction: {x-y},Multiplication: {x*y},Division {x/y}')
+# print(f'Addition: {x+y}, Subtraction: {x-y},Multiplication: {x*y},Division {x/y}')
+
+#input and output
+a = input('Enter Name: ')
+print (a)
