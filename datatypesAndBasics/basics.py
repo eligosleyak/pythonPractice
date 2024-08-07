@@ -5,4 +5,24 @@ Multiple line comments
 Comment works on multiple lines
 """
 
-print("Hello World")
+# print("Hello World")
+
+# x = 10
+# print (x)
+# print (type(x))
+
+# y = 10.5
+# print (type(y))
+
+# x = 10
+# x = 10.5
+# print (x)
+
+# x = 'a'
+# print(type(x))
+
+#data type conversion
+# x = '1'
+# x = int(x)
+# print(x)
+
