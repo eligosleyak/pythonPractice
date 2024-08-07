@@ -25,4 +25,8 @@ Comment works on multiple lines
 # x = '1'
 # x = int(x)
 # print(x)
+#Addition subtraction multiplication and division of two
+x = 10
+y = 12
 
+print(f'Addition: {x+y}, Subtraction: {x-y},Multiplication: {x*y},Division {x/y}')
