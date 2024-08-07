@@ -32,5 +32,9 @@ Comment works on multiple lines
 # print(f'Addition: {x+y}, Subtraction: {x-y},Multiplication: {x*y},Division {x/y}')
 
 #input and output
-a = input('Enter Name: ')
-print (a)
+# a = input('Enter Name: ')
+# print (a)
+
+x = int(input("First number: "))
+y = int(input("Second number: "))
+print(x+y)
