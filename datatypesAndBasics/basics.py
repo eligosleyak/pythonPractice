@@ -35,6 +35,14 @@ Comment works on multiple lines
 # a = input('Enter Name: ')
 # print (a)
 
-x = int(input("First number: "))
-y = int(input("Second number: "))
-print(x+y)
+#input number
+# x = int(input("First number: "))
+# y = int(input("Second number: "))
+# print(x+y)
+
+# Program to calculate simple interest
+p = float(input("Enter principle: "))
+t = float(input("Enter time: "))
+r = float(input("Enter rate: "))
+si = (p*t*r)/100
+print(f'For principle {p} at the rate of {r} and time {t} the Simple Interest is {si}')
