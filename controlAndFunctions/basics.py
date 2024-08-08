@@ -25,17 +25,44 @@ Conditional statement
 #     print(f'{x} is an even number')
 
 # Task 1: Take username and password from user check if password is same as the one set by admin
-database_password = 'admin123'
-database_username = 'admin'
-username = input("Enter username: ")
-if database_username == username:
-    print(f'Welcome {username}')
-    password = input("Enter password: ")
-    if password == database_password:
-        print(f'Logged in suucessfully')
-    else:
-        print(f'Wrong password')
-else:
-    print(f'Username not found')
+# database_password = 'admin123'
+# database_username = 'admin'
+# username = input("Enter username: ")
+# if database_username == username:
+#     print(f'Welcome {username}')
+#     password = input("Enter password: ")
+#     if password == database_password:
+#         print(f'Logged in suucessfully')
+#     else:
+#         print(f'Wrong password')
+# else:
+#     print(f'Username not found')
 
-    
+# Task 2: Create a KBC / quiz where 5 questions are asked and 5 answers need to be provided after each correct answer score increases by 100
+score = 0
+ans = input('What country has the highest life expectancy?')
+if ans.lower() == 'hong kong':
+    score+=100
+    ans = input('Where would you be if you were standing on the Spanish Steps?')
+    if ans.lower() == 'rome':
+        score+=100
+        ans = input('Which language has the more native speakers: English or Spanish? ')
+        if ans.lower() == 'spanish':
+            score+=100
+            ans = input('What is the most common surname in the United States?')
+            if ans.lower() == 'smith':
+                score+=100
+                ans = input('What disease commonly spread on pirate ships? ')
+                if ans.lower() == 'scurvy':
+                    score+=100
+                    print(f'Successfully answered all questions score is {score}')
+                else:
+                    print(f'You got {score}')
+            else:
+                print(f'You got {score}')
+        else:
+            print(f'You got {score}')
+    else:
+     print(f'You got {score}')
+else:
+    print(f'You got {score}')
