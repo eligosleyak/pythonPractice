@@ -76,6 +76,9 @@ Looop and iterations:
         -for loop used whrn we know the starting point and we know the ending point of the loop
         -while loop used when we don't know the ending point
 '''
+"""
+For Loop
+"""
 
 # for vara in range(1,10):
 #     print(vara)
@@ -85,5 +88,18 @@ Looop and iterations:
 # for vara in range(1,100):
 #     if(vara%2 != 0):
 #         print(vara)
-for vara in range(1,100,2):
-    print(vara)
+# for vara in range(1,100,2):
+#     print(vara)
+
+"""
+While Loop
+
+while alive:
+    if death;
+        break
+"""
+# Task 4: Continuosly take input from user until they give a number divisible by 5
+while True:
+    ans = int(input("Enter a number: "))
+    if ans %5 == 0:
+        break
