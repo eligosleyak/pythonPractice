@@ -88,6 +88,8 @@ For Loop
 # for vara in range(1,100):
 #     if(vara%2 != 0):
 #         print(vara)
+
+#Approach 2
 # for vara in range(1,100,2):
 #     print(vara)
 
@@ -99,7 +101,31 @@ while alive:
         break
 """
 # Task 4: Continuosly take input from user until they give a number divisible by 5
-while True:
-    ans = int(input("Enter a number: "))
-    if ans %5 == 0:
-        break
+# while True:
+#     ans = int(input("Enter a number: "))
+#     if ans %5 == 0:
+#         break
+
+"""
+Functions:
+    -definition: Define the function and what it will do
+    -calling: Invoke or call that specific function
+
+    -definition of function:
+        def function_name(parameters):
+            print(parameters)
+
+    -calling of function:
+        function_name(5)
+"""
+#Function to check even or odd number
+def evenNumberChecker(x):
+    if x%2 == 0:
+        print('Even')
+    else:
+        print('Odd')
+
+evenNumberChecker(5)
+evenNumberChecker(12)
+evenNumberChecker(7)
+evenNumberChecker(69)
