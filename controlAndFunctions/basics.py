@@ -131,13 +131,26 @@ Functions:
 # evenNumberChecker(69)
 
 # Task 6: Create a function that takes input x and prints us if its a multiple of 10 or not
-a = int(input("Enter a number: "))
+# a = int(input("Enter a number: "))
 
 
-def multipleOfTen(a):
-    if a%10 == 0:
-        print(f'{a} is a multiple of 10')
+# def multipleOfTen(a):
+#     if a%10 == 0:
+#         print(f'{a} is a multiple of 10')
+#     else:
+#         print(f'{a} is not a multiple of 10')
+
+# multipleOfTen(a)
+
+"""
+Return type function;
+    -function that can return output to the main flow of the code
+"""
+
+def evenOddChecker(x):
+    if x%2 == 0:
+        return 'even',x
     else:
-        print(f'{a} is not a multiple of 10')
-
-multipleOfTen(a)
+        return 'odd',x
+op = evenOddChecker(10)
+print(op)
