@@ -119,13 +119,25 @@ Functions:
         function_name(5)
 """
 #Function to check even or odd number
-def evenNumberChecker(x):
-    if x%2 == 0:
-        print('Even')
-    else:
-        print('Odd')
+# def evenNumberChecker(x):
+#     if x%2 == 0:
+#         print('Even')
+#     else:
+#         print('Odd')
 
-evenNumberChecker(5)
-evenNumberChecker(12)
-evenNumberChecker(7)
-evenNumberChecker(69)
+# evenNumberChecker(5)
+# evenNumberChecker(12)
+# evenNumberChecker(7)
+# evenNumberChecker(69)
+
+# Task 6: Create a function that takes input x and prints us if its a multiple of 10 or not
+a = int(input("Enter a number: "))
+
+
+def multipleOfTen(a):
+    if a%10 == 0:
+        print(f'{a} is a multiple of 10')
+    else:
+        print(f'{a} is not a multiple of 10')
+
+multipleOfTen(a)
