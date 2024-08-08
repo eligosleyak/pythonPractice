@@ -77,5 +77,13 @@ Looop and iterations:
         -while loop used when we don't know the ending point
 '''
 
-for vara in range(1,10):
+# for vara in range(1,10):
+#     print(vara)
+
+# print odd number from 1 to 100
+#Approach 1
+# for vara in range(1,100):
+#     if(vara%2 != 0):
+#         print(vara)
+for vara in range(1,100,2):
     print(vara)
