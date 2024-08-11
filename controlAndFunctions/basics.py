@@ -155,14 +155,23 @@ Return type function;
 # op = evenOddChecker(10)
 # print(op)
 
-# Recursive Function
-def factorial(n):
-    #Base Case: if n is 0 or 1, return 1
-    if n==0 or n==1:
-        return 1
-    #Recursive Case: n * factorial of (n-1)
-    else:
-        return n*factorial(n-1)
+# # Recursive Function
+# def factorial(n):
+#     #Base Case: if n is 0 or 1, return 1
+#     if n==0 or n==1:
+#         return 1
+#     #Recursive Case: n * factorial of (n-1)
+#     else:
+#         return n*factorial(n-1)
 
-#Example usage:
-print(factorial(5)) #Output will be 120
+# #Example usage:
+# print(factorial(5)) #Output will be 120
+
+# Sum of n numbers
+def suma(n):
+    if n==0:
+        return 0
+    else:
+        return n+suma(n-1)
+
+print(suma(5))
