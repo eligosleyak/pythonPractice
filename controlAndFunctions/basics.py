@@ -167,11 +167,11 @@ Return type function;
 # #Example usage:
 # print(factorial(5)) #Output will be 120
 
-# Sum of n numbers
+# Task 7: Sum of n numbers
 def suma(n):
     if n==0:
         return 0
     else:
         return n+suma(n-1)
 
-print(suma(5))
+print(suma(int(input('Enter a number: '))))
