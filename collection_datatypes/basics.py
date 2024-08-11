@@ -117,20 +117,31 @@ Dictionary
 # print(dic)
 
 # Task 4: Create LBC quiz question ans dictionary using zip function
-ques = [
-    'What country has the highest life expectancy',
-    'Where would you be if you were standing on the Spanish Steps?',
-    'Which language has the more native speakers: English or Spanish? ',
-    'What is the most common surname in the United States?',
-    'What disease commonly spread on pirate ships? ',
-]
-ans = [
-    'hong kong',
-    'rome',
-    'spanish',
-    'smith',
-    'scurvy'
-]
-kbc = dict(zip(ques,ans))
+# ques = [
+#     'What country has the highest life expectancy',
+#     'Where would you be if you were standing on the Spanish Steps?',
+#     'Which language has the more native speakers: English or Spanish? ',
+#     'What is the most common surname in the United States?',
+#     'What disease commonly spread on pirate ships? ',
+# ]
+# ans = [
+#     'hong kong',
+#     'rome',
+#     'spanish',
+#     'smith',
+#     'scurvy'
+# ]
+# kbc = dict(zip(ques,ans))
+
+# print(kbc)
+
+# Task 4: Create LBC quiz question ans dictionary using zip function, take user input
+qn = []
+ans = []
+for i in range(1,5): 
+    qn.append(input('Enter question: '))
+    ans.append( input('Enter ans: '))
+    
+kbc = dict(zip(qn,ans))
 
 print(kbc)
