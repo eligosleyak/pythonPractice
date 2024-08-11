@@ -25,7 +25,32 @@ List
 #     print(list_index,list_element)
 
 # Task 1: Loop over each element of this list and show only even number
-li = [1,2,3,4,5]
-for i in range(0,len(li)):
-    if li[i]%2==0:
-        print(li[i])
+# li = [1,2,3,4,5]
+# for i in range(0,len(li)):
+#     if li[i]%2==0:
+#         print(li[i])
+
+#How to add elements to list
+lis = []
+print(lis,len(lis))
+
+print('--'*25)
+
+#staticly add element to list, this is worst possible approach
+lis = [1]
+print(lis)
+
+print('--'*25)
+
+#Dynamically adding element to the list
+lis.append(2)
+lis.append(3)
+print(lis)
+
+print('--'*25)
+
+lis4 = []
+for an_element in range(1,10):
+    lis4.append(an_element)
+
+print(lis4)
