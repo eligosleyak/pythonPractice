@@ -65,6 +65,13 @@ List
 
 #Slicing in list
 
-lis5 = [1,2,3,4,5]
-print(lis5[1:])
-print(lis5[1:4])
+# lis5 = [1,2,3,4,5]
+# print(lis5[1:])
+# print(lis5[1:4])
+
+# Removing element from list
+lis = [1,2,3,4,5,6,7,8]
+
+#easiest way is to use pop
+lis.pop(2)
+print(lis)
