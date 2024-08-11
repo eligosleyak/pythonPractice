@@ -31,26 +31,34 @@ List
 #         print(li[i])
 
 #How to add elements to list
-lis = []
-print(lis,len(lis))
+# lis = []
+# print(lis,len(lis))
 
-print('--'*25)
+# print('--'*25)
 
-#staticly add element to list, this is worst possible approach
-lis = [1]
-print(lis)
+# #staticly add element to list, this is worst possible approach
+# lis = [1]
+# print(lis)
 
-print('--'*25)
+# print('--'*25)
 
-#Dynamically adding element to the list
-lis.append(2)
-lis.append(3)
-print(lis)
+# #Dynamically adding element to the list
+# lis.append(2)
+# lis.append(3)
+# print(lis)
 
-print('--'*25)
+# print('--'*25)
 
+# lis4 = []
+# for an_element in range(1,10):
+#     lis4.append(an_element)
+
+# print(lis4)
+
+# Task 2: Create a list that should contain all even numbers from 1 to 100
 lis4 = []
-for an_element in range(1,10):
-    lis4.append(an_element)
+for an_element in range(1,100):
+    if an_element%2==0:
+     lis4.append(an_element)
 
 print(lis4)
