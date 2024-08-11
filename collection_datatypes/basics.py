@@ -111,7 +111,26 @@ Dictionary
 
 # Using list
 
-lis = ['apple','ball','cat']
-val = ['red color fruit','something to play with','animal that makes meow sound']
-dic = dict(zip(lis,val))
-print(dic)
+# lis = ['apple','ball','cat']
+# val = ['red color fruit','something to play with','animal that makes meow sound']
+# dic = dict(zip(lis,val))
+# print(dic)
+
+# Task 4: Create LBC quiz question ans dictionary using zip function
+ques = [
+    'What country has the highest life expectancy',
+    'Where would you be if you were standing on the Spanish Steps?',
+    'Which language has the more native speakers: English or Spanish? ',
+    'What is the most common surname in the United States?',
+    'What disease commonly spread on pirate ships? ',
+]
+ans = [
+    'hong kong',
+    'rome',
+    'spanish',
+    'smith',
+    'scurvy'
+]
+kbc = dict(zip(ques,ans))
+
+print(kbc)
