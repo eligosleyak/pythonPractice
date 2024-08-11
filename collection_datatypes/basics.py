@@ -56,9 +56,15 @@ List
 # print(lis4)
 
 # Task 2: Create a list that should contain all even numbers from 1 to 100
-lis4 = []
-for an_element in range(1,100):
-    if an_element%2==0:
-     lis4.append(an_element)
+# lis4 = []
+# for an_element in range(1,100):
+#     if an_element%2==0:
+#      lis4.append(an_element)
 
-print(lis4)
+# print(lis4)
+
+#Slicing in list
+
+lis5 = [1,2,3,4,5]
+print(lis5[1:])
+print(lis5[1:4])
