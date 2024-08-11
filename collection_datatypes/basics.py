@@ -77,18 +77,16 @@ List
 # print(lis)
 
 #Task 3: Create a list of numbers from 0-100 using append. remove all the odd numbers from that list
-# lis = []
-# for a in range(0,101):
-#     lis.append(a)
-# print(lis)
+lis = []
+for a in range(0,101):
+    lis.append(a)
+print(lis)
 
-# for a in range(0,101):
-#     if lis[a]%2 != 0:
-#         lis.pop(a)
+for a,b in enumerate(lis):
+    if b%2 != 0:
+        lis.pop(a)
 
-# print(lis)
-
-# Task 3 not solved
+print(lis)
 
 '''
 Dictionary
@@ -100,11 +98,11 @@ Dictionary
     - It is demoted by '{' bracket
 '''
 
-dictionary_list = {
-    'key_1': 10,
-    'key_2': 20,
-}
+# dictionary_list = {
+#     'key_1': 10,
+#     'key_2': 20,
+# }
 
-print(dictionary_list['key_1'])
+# print(dictionary_list['key_1'])
 
-print(dictionary_list.keys(),dictionary_list.values())
+# print(dictionary_list.keys(),dictionary_list.values())
