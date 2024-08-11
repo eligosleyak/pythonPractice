@@ -147,10 +147,22 @@ Return type function;
     -function that can return output to the main flow of the code
 """
 
-def evenOddChecker(x):
-    if x%2 == 0:
-        return 'even',x
+# def evenOddChecker(x):
+#     if x%2 == 0:
+#         return 'even',x
+#     else:
+#         return 'odd',x
+# op = evenOddChecker(10)
+# print(op)
+
+# Recursive Function
+def factorial(n):
+    #Base Case: if n is 0 or 1, return 1
+    if n==0 or n==1:
+        return 1
+    #Recursive Case: n * factorial of (n-1)
     else:
-        return 'odd',x
-op = evenOddChecker(10)
-print(op)
+        return n*factorial(n-1)
+
+#Example usage:
+print(factorial(5)) #Output will be 120
