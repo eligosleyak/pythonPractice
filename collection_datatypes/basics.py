@@ -77,16 +77,16 @@ List
 # print(lis)
 
 #Task 3: Create a list of numbers from 0-100 using append. remove all the odd numbers from that list
-lis = []
-for a in range(0,101):
-    lis.append(a)
-print(lis)
+# lis = []
+# for a in range(0,101):
+#     lis.append(a)
+# print(lis)
 
-for a,b in enumerate(lis):
-    if b%2 != 0:
-        lis.pop(a)
+# for a,b in enumerate(lis):
+#     if b%2 != 0:
+#         lis.pop(a)
 
-print(lis)
+# print(lis)
 
 '''
 Dictionary
@@ -106,3 +106,12 @@ Dictionary
 # print(dictionary_list['key_1'])
 
 # print(dictionary_list.keys(),dictionary_list.values())
+
+# Adding to dictionary
+
+# Using list
+
+lis = ['apple','ball','cat']
+val = ['red color fruit','something to play with','animal that makes meow sound']
+dic = dict(zip(lis,val))
+print(dic)
