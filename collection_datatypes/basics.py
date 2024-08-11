@@ -136,12 +136,24 @@ Dictionary
 # print(kbc)
 
 # Task 4: Create LBC quiz question ans dictionary using zip function, take user input
-qn = []
-ans = []
-for i in range(1,5): 
-    qn.append(input('Enter question: '))
-    ans.append( input('Enter ans: '))
-    
-kbc = dict(zip(qn,ans))
+# qn = []
+# ans = []
+# for i in range(1,5): 
+#     qn.append(input('Enter question: '))
+#     ans.append( input('Enter ans: '))
 
-print(kbc)
+# kbc = dict(zip(qn,ans))
+
+# print(kbc)
+
+# Approach 2 using update
+dic = {
+    'key1': 10,
+    'key2': 20,
+}
+
+print(dic)
+
+dic.update({'key3': 30, 'key4': 40})
+
+print(dic)
