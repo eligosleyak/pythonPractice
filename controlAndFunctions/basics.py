@@ -168,10 +168,14 @@ Return type function;
 # print(factorial(5)) #Output will be 120
 
 # Task 7: Sum of n numbers
-def suma(n):
-    if n==0:
-        return 0
-    else:
-        return n+suma(n-1)
+# def suma(n):
+#     if n==0:
+#         return 0
+#     else:
+#         return n+suma(n-1)
 
-print(suma(int(input('Enter a number: '))))
+# print(suma(int(input('Enter a number: '))))
+
+# Task 8 Reverse a string using recursive function
+
+# Global variable and local variable
