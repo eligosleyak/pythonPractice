@@ -69,9 +69,42 @@ List
 # print(lis5[1:])
 # print(lis5[1:4])
 
-# Removing element from list
-lis = [1,2,3,4,5,6,7,8]
+# # Removing element from list
+# lis = [1,2,3,4,5,6,7,8]
 
-#easiest way is to use pop
-lis.pop(2)
-print(lis)
+# #easiest way is to use pop
+# lis.pop(2)
+# print(lis)
+
+#Task 3: Create a list of numbers from 0-100 using append. remove all the odd numbers from that list
+# lis = []
+# for a in range(0,101):
+#     lis.append(a)
+# print(lis)
+
+# for a in range(0,101):
+#     if lis[a]%2 != 0:
+#         lis.pop(a)
+
+# print(lis)
+
+# Task 3 not solved
+
+'''
+Dictionary
+    - It is a collection datatype with key and value pair
+    - Works on similar concept as hash mapping
+    - key holds the address of element
+    - Classic dictionary is example
+        word: meaning
+    - It is demoted by '{' bracket
+'''
+
+dictionary_list = {
+    'key_1': 10,
+    'key_2': 20,
+}
+
+print(dictionary_list['key_1'])
+
+print(dictionary_list.keys(),dictionary_list.values())
