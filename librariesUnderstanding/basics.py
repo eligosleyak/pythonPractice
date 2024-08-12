@@ -22,3 +22,8 @@ dicta = {
 #Pandas operation 1:
 dataFrameVariable = pd.DataFrame(dicta)
 print(dataFrameVariable)
+
+#Adding new column
+dataFrameVariable['Social Skills'] = [10,20,30,40]
+print('--'*25)
+print(dataFrameVariable)
