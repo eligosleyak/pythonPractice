@@ -147,13 +147,23 @@ Dictionary
 # print(kbc)
 
 # Approach 2 using update
-dic = {
-    'key1': 10,
-    'key2': 20,
-}
+# dic = {
+#     'key1': 10,
+#     'key2': 20,
+# }
 
-print(dic)
+# print(dic)
 
-dic.update({'key3': 30, 'key4': 40})
+# dic.update({'key3': 30, 'key4': 40})
 
-print(dic)
+# print(dic)
+
+#Approach 3 using append
+def reverse(s):
+    if s=='':
+        return s
+    else:
+        return reverse(s[1:])+s[0]
+
+output = reverse('apple')
+print(output)
