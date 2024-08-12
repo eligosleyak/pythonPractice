@@ -73,3 +73,5 @@ dataFrameVariable.to_csv('data.csv', index=False)
 #Loading from CSV
 newDataFrame = pd.read_csv('data.csv')
 print(newDataFrame)
+print('--'*25)
+print(newDataFrame.iloc[1])
