@@ -42,12 +42,15 @@ Task 1:
     convet to dataframe
     display the final table
 '''
+
 n = int(input('Enter number of questions: '))
 qtn = []
 ans = []
-for i in range(0,n):
+for i in range(0, n):
     qtn.append(input('Enter a question: '))
-    ans.append(('Enter the answer: '))
-dic = dict(zip(qtn,ans))
+    ans.append(input('Enter the answer: '))
+
+# Create a DataFrame with questions and answers as columns
+dic = {'Question': qtn, 'Answer': ans}
 dataFrame = pd.DataFrame(dic)
 print(dataFrame)
