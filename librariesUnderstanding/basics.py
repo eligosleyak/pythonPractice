@@ -55,5 +55,21 @@ Task 1:
 # dataFrame = pd.DataFrame(dic)
 # print(dataFrame)
 
-#Look up certain row loc,iloc
-print(dataFrameVariable.loc[dataFrameVariable['marks']<=32])
+#Look up certain row loc, iloc
+# print(dataFrameVariable.loc[dataFrameVariable['marks']<=32])
+
+"""
+Task 2:
+    In the previous table include this question compulsory:
+        What is the capital city of Nepal: KTM
+    Look up only the row with this question: 'What is the capital city of Nepal'
+"""
+
+# print(dataFrame.loc[dataFrame['Question'] == 'What is the capital city of Nepal'])
+
+#SAving to CSV
+dataFrameVariable.to_csv('data.csv', index=False)
+
+#Loading from CSV
+newDataFrame = pd.read_csv('data.csv')
+print(newDataFrame)
