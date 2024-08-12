@@ -14,13 +14,13 @@ Pandas Library:
     -Work on table, read table, modify table, save table and everything related table.
 """
 
-# dicta = {
-#     'student': ['Ram', 'Shyam', 'Sita', 'Gita'],
-#     'marks': [10, 20, 30, 40],
-# }
+dicta = {
+    'student': ['Ram', 'Shyam', 'Sita', 'Gita'],
+    'marks': [10, 20, 30, 40],
+}
 
 #Pandas operation 1:
-# dataFrameVariable = pd.DataFrame(dicta)
+dataFrameVariable = pd.DataFrame(dicta)
 # print(dataFrameVariable)
 
 # #Adding new column
@@ -43,14 +43,17 @@ Task 1:
     display the final table
 '''
 
-n = int(input('Enter number of questions: '))
-qtn = []
-ans = []
-for i in range(0, n):
-    qtn.append(input('Enter a question: '))
-    ans.append(input('Enter the answer: '))
+# n = int(input('Enter number of questions: '))
+# qtn = []
+# ans = []
+# for i in range(0, n):
+#     qtn.append(input('Enter a question: '))
+#     ans.append(input('Enter the answer: '))
 
-# Create a DataFrame with questions and answers as columns
-dic = {'Question': qtn, 'Answer': ans}
-dataFrame = pd.DataFrame(dic)
-print(dataFrame)
+# # Create a DataFrame with questions and answers as columns
+# dic = {'Question': qtn, 'Answer': ans}
+# dataFrame = pd.DataFrame(dic)
+# print(dataFrame)
+
+#Look up certain row loc,iloc
+print(dataFrameVariable.loc[dataFrameVariable['marks']<=32])
