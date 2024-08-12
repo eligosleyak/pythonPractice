@@ -27,3 +27,8 @@ print(dataFrameVariable)
 dataFrameVariable['Social Skills'] = [10,20,30,40]
 print('--'*25)
 print(dataFrameVariable)
+
+#Removing column
+dataFrameVariable = dataFrameVariable.drop(columns = ('Social Skills'))
+print('--'*25)
+print(dataFrameVariable)
