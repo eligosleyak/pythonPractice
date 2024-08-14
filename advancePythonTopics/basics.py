@@ -37,18 +37,44 @@ Generator in pyhton
     -def function_name()
         yield statement
 '''
-#Simple generator
-def simple_generator():
-    yield 'a'
-    yield 'b'
+# #Simple generator
+# def simple_generator():
+#     yield 'a'
+#     yield 'b'
 
-#Approach 1 to get output from generator
-for value in simple_generator():
-    print (value)
+# #Approach 1 to get output from generator
+# for value in simple_generator():
+#     print (value)
 
-print('--'*25)
+# print('--'*25)
 
-#Approch 2
-x = simple_generator()
-print(next(x))
-print(next(x))
+# #Approch 2
+# x = simple_generator()
+# print(next(x))
+# print(next(x))
+
+#GEnerator Expressions
+'''
+Create generator object very similar to list comprehension
+'''
+# squareGen = (x**2 for x in range(10))
+# print(squareGen)
+# print(list(squareGen))
+
+'''
+Create a generator operator that yields all the even numbers using generator expression
+Create infinite loop where user is asked to type something
+if user types next
+display the next value of the generator operator
+when the iteration is over the loop must exit {Hint: Using try exceot to handle the situation}
+'''
+evennum = (x for x in range(10) if x%2 == 0)
+while True:
+    try:
+        ans = input("Enter: ")
+        if ans == 'next':
+            print(next(evennum))
+        else:
+            ans = input("Enter: ")
+    except:
+        print('Bye Bye')
