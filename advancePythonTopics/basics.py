@@ -85,5 +85,18 @@ Lambda:
     -for very short and sweet operation
     -Thesew function are used in conjunction with higher level functions like map, filter and so on.
 '''
-x = lambda parameter: parameter**2
-print(x(5))
+# x = lambda parameter: parameter**2
+# print(x(5))
+
+# sum = lambda x,y: x+y
+# print(sum(2,3))
+
+'''
+Task 2: Given a list = [1,2,3,4,5,6,7,8,9,10] create a lambda function that returns half of that value and pass each element
+of this list to that function and save everything in new list(using list comprehension)
+list_2 = [0,5,1,1.5,....]
+'''
+list_1 = [i for i in range (1,11) ]
+halflist = lambda list_1: list_1/2
+list_2 = [halflist(i) for i in list_1]
+print (list_2)
