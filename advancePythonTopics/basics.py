@@ -117,10 +117,13 @@ number of column should have list_variable on it even/odd column should have odd
 display the final dataframe
 '''
 import pandas as pd
-n = int(input('Number of elements?: '))
-list_variable = [int(input('Enter a numnber: ')) for i in range(n)]
-even_odd = lambda parameter_1: 'even' if parameter_1%2 == 0 else 'odd'
-odd_even = [even_odd(i) for i in list_variable ]
-ogg = {'Number': list_variable, 'odd/even': odd_even}
-dataFrame = pd.DataFrame(ogg)
-print(dataFrame)
+def main():
+    n = int(input('Number of elements?: '))
+    list_variable = [int(input('Enter a numnber: ')) for i in range(n)]
+    even_odd = lambda parameter_1: 'even' if parameter_1%2 == 0 else 'odd'
+    odd_even = [even_odd(i) for i in list_variable ]
+    ogg = {'Number': list_variable, 'odd/even': odd_even}
+    dataFrame = pd.DataFrame(ogg)
+    print(dataFrame)
+
+main()
