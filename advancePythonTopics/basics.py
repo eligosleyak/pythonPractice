@@ -96,7 +96,31 @@ Task 2: Given a list = [1,2,3,4,5,6,7,8,9,10] create a lambda function that retu
 of this list to that function and save everything in new list(using list comprehension)
 list_2 = [0,5,1,1.5,....]
 '''
-list_1 = [i for i in range (1,11) ]
-halflist = lambda list_1: list_1/2
-list_2 = [halflist(i) for i in list_1]
-print (list_2)
+# list_1 = [i for i in range (1,11) ]
+# halflist = lambda list_1: list_1/2
+# list_2 = [halflist(i) for i in list_1]
+# print (list_2)
+
+#using if else inside lambda
+# greater_num = lambda x,y:x if x>y else y
+# print(greater_num(2,3))
+
+'''
+WAP to take in N(n = number of element on a list)
+Loop till n lines and get different numbers
+put all the numbers in a list named list_variable
+create a lambda function that takes in parameter_1, return 'even' if even number and returns 'odd' if the number is odd
+using list comprehension create another list named odd_even if should contain all the output of lambda function
+passed over each element of list_variable
+Finally crate a dataframe with 2 columns, nmber, even/odd
+number of column should have list_variable on it even/odd column should have odd_eveen_list
+display the final dataframe
+'''
+import pandas as pd
+n = int(input('Number of elements?: '))
+list_variable = [int(input('Enter a numnber: ')) for i in range(n)]
+even_odd = lambda parameter_1: 'even' if parameter_1%2 == 0 else 'odd'
+odd_even = [even_odd(i) for i in list_variable ]
+ogg = {'Number': list_variable, 'odd/even': odd_even}
+dataFrame = pd.DataFrame(ogg)
+print(dataFrame)
