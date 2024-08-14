@@ -68,13 +68,22 @@ if user types next
 display the next value of the generator operator
 when the iteration is over the loop must exit {Hint: Using try exceot to handle the situation}
 '''
-evennum = (x for x in range(10) if x%2 == 0)
-while True:
-    try:
-        ans = input("Enter: ")
-        if ans == 'next':
-            print(next(evennum))
-        else:
-            ans = input("Enter: ")
-    except:
-        print('Bye Bye')
+# evennum = (x for x in range(10) if x%2 == 0)
+# while True:
+#     try:
+#         ans = input("Enter: ")
+#         if ans == 'next':
+#             print(next(evennum))
+#         else:
+#             ans = input("Enter: ")
+#     except:
+#         print('Bye Bye')
+
+'''
+Lambda:
+    -Lambda are orften refered as anonymous function
+    -for very short and sweet operation
+    -Thesew function are used in conjunction with higher level functions like map, filter and so on.
+'''
+x = lambda parameter: parameter**2
+print(x(5))
