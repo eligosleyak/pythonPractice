@@ -144,8 +144,26 @@ map,filter and reduce
 3. Create another list of length N asking number from user (2nd list created with first list)
 4. using map figure out which from both list add upto 10. Concat the 2 numbers and display the result in list
 '''
-n = int(input('Enter number of elements: '))
-list1 = [int(input('Enter the elements for list 1: ')) for i in range(n)]
-list2 = [int(input('Enter the elements for list 2: ')) for i in range(n)]
-result = list(map(lambda x,y: str(x)+str(y) if x+y == 10 else None,list1,list2))
+# n = int(input('Enter number of elements: '))
+# list1 = [int(input('Enter the elements for list 1: ')) for i in range(n)]
+# list2 = [int(input('Enter the elements for list 2: ')) for i in range(n)]
+# result = list(map(lambda x,y: str(x)+str(y) if x+y == 10 else False,list1,list2))
+# print(result)
+
+'''
+filter:
+    -Filter works very similar to map
+    -It takes function and iterable as input
+    -Retruns output whenever its true
+'''
+# numbers = [1,2,3,4,5]
+# evens = list(filter(lambda x:x%2 == 0,numbers))
+
+'''
+given a list = ['apple','ball','cat','dog','elephant']
+create another list of words which have length>3
+from the given list
+'''
+list1 = ['apple','ball','cat','dog','elephant']
+result = list(filter(lambda x:len(x)>3,list1))
 print(result)
