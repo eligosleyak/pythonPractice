@@ -188,12 +188,34 @@ using map create transition_list_1 passing over the function
 using filter create another transition_list_2 which accepts only those numbers divisible by 5
 finally create a sum of all the numbers of transition_list_2 using reduce
 """
-from functools import reduce
-n = int(input('Enter number of elements: '))
-list1 = [int(input('Enter the elements: ')) for i in range(n)]
-def square_and_add_4(x):
-    return (x**2+4)
-transition_list_1 = list(map(square_and_add_4,list1))
-transition_list_2 = list(filter(lambda x:x%5==0,transition_list_1))
-sum = reduce(lambda x,y:x+y,transition_list_2)
-print(sum)
+# from functools import reduce
+# n = int(input('Enter number of elements: '))
+# list1 = [int(input('Enter the elements: ')) for i in range(n)]
+# def square_and_add_4(x):
+#     return (x**2+4)
+# transition_list_1 = list(map(square_and_add_4,list1))
+# transition_list_2 = list(filter(lambda x:x%5==0,transition_list_1))
+# sum = reduce(lambda x,y:x+y,transition_list_2)
+# print(sum)
+
+'''
+Decorators:
+    -Decorators are special functions that takes in other functions as parameter
+    -Decorators are unsderstood by the code editors with @
+'''
+
+def smart_conversion(func):
+    def wrapper(x,y):
+        return func(int(x),int(y))
+    return wrapper
+
+@smart_conversion
+def division(x,y):
+    return x/y
+
+@smart_conversion
+def addition(x,y):
+    return x+y
+
+print(addition('4','2'))
+print(division('4','2'))
