@@ -116,14 +116,36 @@ Finally crate a dataframe with 2 columns, nmber, even/odd
 number of column should have list_variable on it even/odd column should have odd_eveen_list
 display the final dataframe
 '''
-import pandas as pd
-def main():
-    n = int(input('Number of elements?: '))
-    list_variable = [int(input('Enter a numnber: ')) for i in range(n)]
-    even_odd = lambda parameter_1: 'even' if parameter_1%2 == 0 else 'odd'
-    odd_even = [even_odd(i) for i in list_variable ]
-    ogg = {'Number': list_variable, 'odd/even': odd_even}
-    dataFrame = pd.DataFrame(ogg)
-    print(dataFrame)
+# import pandas as pd
+# def main():
+#     n = int(input('Number of elements?: '))
+#     list_variable = [int(input('Enter a numnber: ')) for i in range(n)]
+#     even_odd = lambda parameter_1: 'even' if parameter_1%2 == 0 else 'odd'
+#     odd_even = [even_odd(i) for i in list_variable ]
+#     ogg = {'Number': list_variable, 'odd/even': odd_even}
+#     dataFrame = pd.DataFrame(ogg)
+#     print(dataFrame)
 
-main()
+# main()
+
+'''
+map,filter and reduce
+    -map takes in function and collection and iterates all elements one by one over that function
+    -map can also be used to map out 2 different parameters from 2 different collections over a function
+'''
+
+# list_of_numbers = [i for i in range(11)]
+# output_of_map = list(map(lambda x:x**2, list_of_numbers))#Syntax map(function,list/iterable)
+# print(output_of_map)
+
+'''
+1. Take N from user (Number of elements)
+2. Create a lit of length N asking number from user (ask numbers and put in list)
+3. Create another list of length N asking number from user (2nd list created with first list)
+4. using map figure out which from both list add upto 10. Concat the 2 numbers and display the result in list
+'''
+n = int(input('Enter number of elements: '))
+list1 = [int(input('Enter the elements for list 1: ')) for i in range(n)]
+list2 = [int(input('Enter the elements for list 2: ')) for i in range(n)]
+result = list(map(lambda x,y: str(x)+str(y) if x+y == 10 else None,list1,list2))
+print(result)
