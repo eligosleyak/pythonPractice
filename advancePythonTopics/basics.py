@@ -164,6 +164,36 @@ given a list = ['apple','ball','cat','dog','elephant']
 create another list of words which have length>3
 from the given list
 '''
-list1 = ['apple','ball','cat','dog','elephant']
-result = list(filter(lambda x:len(x)>3,list1))
-print(result)
+# list1 = ['apple','ball','cat','dog','elephant']
+# result = list(filter(lambda x:len(x)>3,list1))
+# print(result)
+
+'''
+reduce
+    -[1,2,3,4,5]
+    -multiply(x,y)->x*y
+    -reduce(function,iterable,initial_value)
+    -It runs the function one by one in cumulative way from left to right
+'''
+# from functools import reduce
+# list_of_numbers = [1,2,3,4,5]
+# output = reduce(lambda x,y: x*y,list_of_numbers)
+# print(output)
+
+"""
+Create a list taking n like done previously
+create a function square_and_add_4
+return x**2+4
+using map create transition_list_1 passing over the function
+using filter create another transition_list_2 which accepts only those numbers divisible by 5
+finally create a sum of all the numbers of transition_list_2 using reduce
+"""
+from functools import reduce
+n = int(input('Enter number of elements: '))
+list1 = [int(input('Enter the elements: ')) for i in range(n)]
+def square_and_add_4(x):
+    return (x**2+4)
+transition_list_1 = list(map(square_and_add_4,list1))
+transition_list_2 = list(filter(lambda x:x%5==0,transition_list_1))
+sum = reduce(lambda x,y:x+y,transition_list_2)
+print(sum)
