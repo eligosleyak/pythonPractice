@@ -204,11 +204,34 @@ Decorators:
     -Decorators are unsderstood by the code editors with @
 '''
 
+# def smart_conversion(func):
+#     def wrapper(x,y):
+#         return func(int(x),int(y))
+#     return wrapper
+
+# @smart_conversion
+# def division(x,y):
+#     return x/y
+
+# @smart_conversion
+# def addition(x,y):
+#     return x+y
+
+# print(addition('4','2'))
+# print(division('4','2'))
+
+'''
+Create a function named
+division
+addition
+subtraction
+multiplication
+create a decorator named identify function and parameters thatr should display which function is running and what are the parameters
+'''
 def smart_conversion(func):
     def wrapper(x,y):
-        return func(int(x),int(y))
+        print(f"{func.__name__} between {x} and {y}")
     return wrapper
-
 @smart_conversion
 def division(x,y):
     return x/y
@@ -217,5 +240,12 @@ def division(x,y):
 def addition(x,y):
     return x+y
 
-print(addition('4','2'))
-print(division('4','2'))
+@smart_conversion
+def subtraction(x,y):
+    return x-y
+
+@smart_conversion
+def multiplication(x,y):
+    return x*y
+
+print(addition(1,2))
