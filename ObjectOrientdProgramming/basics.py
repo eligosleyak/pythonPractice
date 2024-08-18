@@ -124,12 +124,99 @@ if 2 is presssed display that note that was saved earlier
 
 if 3 is pressed it terminates
 '''
-class user:
+import json
+
+class User:
     def __init__(self) -> None:
-        self.action = input('What would you like to do: 1. Signup 2. Signin')
-        if self.action == 1:
+        action = int(input('What would you like to do: 1. Signup 2. Signin: '))
+        if action == 1:
             self.signup()
-        elif self.action == 2:
+        elif action == 2:
             self.signin()
         else:
-            self()
+            self.__init__()
+    
+    def signup(self):
+        self.username = input('Enter username: ')
+        self.password = input('Enter password: ')
+        self.phone_number = input('Enter phone number: ')  # Changed to str to accommodate different formats
+        self.userdata = {
+            'username': self.username,
+            'password': self.password,
+            'phone_number': self.phone_number
+        }
+        
+        try:
+            # Try to read the existing data from the file
+            try:
+                with open('userfile.json', 'r') as file:
+                    data = json.load(file)
+            except (FileNotFoundError, json.JSONDecodeError):
+                data = []  # Initialize with an empty list if file is not found or empty
+
+            # Check if the username already exists
+            for user in data:
+                if user['username'] == self.username:
+                    print("Username already exists. Please choose another.")
+                    return
+            
+            # Append the new user data to the list
+            data.append(self.userdata)
+            
+            # Write the updated list back to the file
+            with open('userfile.json', 'w') as file:
+                json.dump(data, file, indent=4)
+
+            print("Signup successful!")
+
+        except Exception as error:
+            print(f"An error occurred: {error}")
+    
+    def signin(self):
+        username = input('Enter username: ')
+        password = input('Enter password: ')
+        
+        try:
+            with open('userfile.json', 'r') as file:
+                data = json.load(file)
+            
+            # Check if the username and password match any entry
+            for user in data:
+                if user['username'] == username and user['password'] == password:
+                    self.username = username  # Store the logged-in username
+                    self.welcome_user()
+                    return
+            
+            print("Incorrect username or password.")
+
+        except (FileNotFoundError, json.JSONDecodeError):
+            print("No users found. Please sign up first.")
+        except Exception as error:
+            print(f"An error occurred: {error}")
+    
+    def welcome_user(self):
+        action2 = int(input(f'Welcome {self.username}. What would you like to do: 1. Enter Note , 2.Display Note, 3. Exit: '))
+        if action2 == 1:
+            self.enter_note()
+        elif action2 == 2:
+            self.display_note()
+        elif action2 == 3:
+            self.exit()
+        else:
+            self.welcome_user()  # Call the method again if an invalid option is selected
+
+    def enter_note(self):
+        self.note = input("Enter your note: ")
+        print(f"Note saved")
+        self.welcome_user()
+
+    def display_note(self):
+        print("Displaying note...")
+        print(self.note)
+        self.welcome_user()
+
+    def exit(self):
+        print("Exiting...")
+
+# Example usage
+user1 = User()
