@@ -1,3 +1,5 @@
-,sanjay,bijay,lijay,kijay
-maths,10,20,30,40
-science,50,60,70,80
+name,maths,science
+sanjay,10,50
+bijay,20,60
+lijay,30,70
+kijay,40,80
